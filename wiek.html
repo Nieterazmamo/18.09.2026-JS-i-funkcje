@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiek</title>
+</head>
+<body>
+    
+    <label>Wprowadź wiek</label>
+    <input type="number" id="wiek">
+    
+    <br>
+    <br>
+
+    <button onclick="sprawdzWiek()">Sprawdź wiek</button>
+
+    <script>
+
+        function sprawdzWiek() {
+            
+            let wiek = document.getElementById("wiek").value;
+
+            if (parseInt(wiek) >= 18) {
+                alert("Jesteś pełnoletni");
+            } else {
+                alert("Nie jesteś pełnoletni");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakupy</title>
+</head>
+<body>
+    
+    <p>Lista Zakupów</p> <br>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+
+        let lista = document.getElementById("lista");
+        let zakupy = ['mleko', 'chleb', 'kawa', 'banany'];
+
+        for (let i = 0; i < zakupy.length; i++) {
+            
+            lista.innerHTML += '<li>' + zakupy[i] + '</li>'
+
+        }
+
+    </script>
+ 
+</body>
+</html>

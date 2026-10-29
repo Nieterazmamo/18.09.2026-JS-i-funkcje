@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakupy</title>
+</head>
+<body>
+    
+    <label>mleko</label>
+    <input type="checkbox" value="mleko">
+    <br>
+    <label>chleb</label>
+    <input type="checkbox" value="chleb">
+    <br>
+    <label>kawa</label>
+    <input type="checkbox" value="kawa">
+    <br>
+    <label>banany</label>
+    <input type="checkbox" value="banany">
+    <br>
+    <br>
+    <button onclick="zapisz()">Zapisz listę</button>
+
+    <br>
+    <br>
+
+    <ul id="lista">
+        
+    </ul>
+
+    <script>
+
+        function zapisz() {
+            
+            let lista = document.getElementById("lista");
+            let checkbox = document.querySelectorAll('input[type="checkbox"]');
+
+            lista.innerHTML = ""
+
+            for (let i = 0; i < checkbox.length; i++) {
+                
+                if (checkbox[i].checked) {
+                    
+                    lista.innerHTML += '<li>' + checkbox[i].value + '</li>';
+
+                }
+            }
+        }
+
+    </script>
+ 
+</body>
+</html>
